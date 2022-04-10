@@ -1,0 +1,528 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-fam);
+}
+.wrap {
+  flex-wrap: wrap;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+:root {
+  --yellowbg: rgb(252, 195, 2);
+  --navbg: rgb(218, 172, 0);
+  --btn: rgb(0, 190, 201);
+  --fontblack: #313243;
+  --fontwhite: #fff;
+  --fontblue: rgb(0, 190, 201);
+  --whitebg: #fff;
+  --padding: 200px;
+  --font-fam: "Poppins", sans-serif;
+
+  /*teblet padding*/
+  --tab-padding: 30px;
+}
+.header {
+  display: flex;
+  padding: 30px var(--padding);
+  background: var(--navbg);
+  justify-content: space-between;
+}
+.header .nevigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .bar {
+  background: url("img/menu.png");
+  height: 40px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  cursor: pointer;
+  display: none;
+  margin-top: 20px;
+}
+.header .nevigation ul {
+  margin: 0;
+  padding: 0;
+}
+.header .nevigation ul li {
+  display: inline;
+  margin-left: 40px;
+}
+.header .nevigation ul li a {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--fontwhite);
+}
+
+.header .searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .searchbar .icon-s {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--yellowbg);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2),
+    1px 1px 3px 0px rgba(0, 0, 0, 0.2), 1px 1px 4px 0px rgba(0, 0, 0, 0.2),
+    -2px -2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.header .searchbar .icon-s input {
+  border: none;
+  outline: none;
+  background: var(--yellowbg);
+}
+.header .searchbar .icon-s input::placeholder {
+  color: var(--fontwhite);
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.header .searchbar .icon-s i {
+  background: var(--btn);
+  font-size: 23px;
+  padding: 5px 10px 5px 10px;
+  color: var(--fontwhite);
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px var(--padding);
+  background: var(--yellowbg);
+}
+.intro .text {
+  width: 62%;
+  color: var(--fontwhite);
+  overflow: hidden;
+}
+.intro .text h1 {
+  font-size: 67px;
+  font-weight: 500;
+}
+.intro .text h5 {
+  font-size: 30px;
+  font-weight: 500;
+  padding: 20px 0px 10px 0px;
+}
+.intro .text button {
+  border: none;
+  padding: 10px 20px;
+  background: var(--btn);
+  border-radius: 6px;
+  color: var(--fontwhite);
+  transition: all 0.5s ease;
+  font-size: 17px;
+}
+.intro .text button:hover {
+  background: transparent;
+  border: 1px solid var(--whitebg);
+}
+.intro .text .button {
+  background: transparent;
+  border: 1px solid var(--whitebg);
+  margin-left: 40px;
+  margin-top: 20px;
+}
+.intro .text .button:hover {
+  background: var(--btn);
+  border: none;
+}
+.intro .image {
+  width: 33%;
+}
+.aenimal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px var(--padding);
+  position: relative;
+}
+.aenimal .about-aenimal {
+  width: 49%;
+}
+.aenimal .about-aenimal h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--fontblack);
+  padding-bottom: 10px;
+}
+.aenimal .about-aenimal h6 {
+  font-size: 29px;
+  font-weight: 400;
+  color: var(--fontblack);
+  padding: 20px 0px;
+}
+.aenimal .about-aenimal button {
+  padding: 8px 20px;
+  border: none;
+  background: var(--yellowbg);
+  color: var(--fontwhite);
+  font-size: 17px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+.aenimal .img {
+  background-image: linear-gradient(
+      rgba(252, 195, 2, 0.6),
+      rgba(252, 195, 2, 0.5)
+    ),
+    url("img/loveaenimal.png");
+  width: 42%;
+  height: 478px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.border {
+  height: 200px;
+  width: 200px;
+  background: var(--yellowbg);
+  position: absolute;
+  bottom: 72px;
+  left: 54%;
+}
+.round {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background: var(--whitebg);
+  position: absolute;
+  top: 45%;
+  left: 68%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.round i {
+  color: var(--navbg);
+}
+
+.checkup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px var(--padding);
+  background: var(--yellowbg);
+}
+.checkup .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.checkup .title h1 {
+  font-size: 75px;
+  font-weight: 700;
+  color: var(--fontwhite);
+}
+.checkup .title h6 {
+  padding: 20px 0px;
+  color: var(--fontwhite);
+  font-size: 33px;
+  font-weight: 400;
+  width: 70%;
+}
+.checkup .cards {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+.checkup .cards .card1 {
+  display: flex;
+  flex-direction: column;
+  width: 29%;
+}
+.checkup .cards .card1 .img img {
+  width: 100%;
+  object-fit: cover;
+}
+.checkup .cards .card1 .cardtext {
+  text-align: center;
+  color: var(--fontwhite);
+  padding-top: 20px;
+}
+.checkup .cards .card1 .cardtext h2 {
+  font-size: 2.1em;
+  font-weight: 500;
+}
+.checkup .cards .card1 .cardtext h6 {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.aenimal .anim {
+  width: 49%;
+  text-align: right;
+}
+
+.aenimal .img1 {
+  background-image: linear-gradient(
+      rgba(240, 192, 30, 0.6),
+      rgba(240, 192, 30, 0.5)
+    ),
+    url("img/loveaenimal2.png");
+  width: 42%;
+  height: 478px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.border1 {
+  height: 200px;
+  width: 200px;
+  background: var(--yellowbg);
+  position: absolute;
+  bottom: 11%;
+  left: 33%;
+}
+.round1 {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background: var(--whitebg);
+  position: absolute;
+  left: 25%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.round1 i {
+  color: var(--navbg);
+}
+
+del {
+  padding-right: 15px;
+  word-spacing: 1px;
+}
+.checkup .cards button {
+  border: none;
+  padding: 6px 18px;
+  border-radius: 18px;
+  color: var(--fontwhite);
+  background: var(--fontblue);
+  margin-top: 8px;
+  font-size: 17px;
+}
+.checkup .cards .card1 .cardt {
+  padding-top: 12px;
+}
+.employ {
+  background: var(--whitebg);
+  color: var(--fontblack);
+}
+.employ .title h1 {
+  color: var(--fontblack);
+}
+.employ .title h6 {
+  color: var(--fontblack);
+}
+.employ .cards .cardtext h1 {
+  font-size: 1.6em;
+  color: var(--fontblack);
+  padding-top: 20px;
+}
+.employ .cards .cardtext h6 {
+  font-size: 0.6em;
+  font-weight: 300;
+  color: var(--fontblack);
+}
+.employ .cards .cardtext i {
+  height: 40px;
+  width: 40px;
+  background: var(--yellowbg);
+  line-height: 40px;
+  border-radius: 50%;
+  font-size: 17px;
+  margin-right: 8px;
+  margin-top: 10px;
+}
+.bg {
+  background: linear-gradient(rgba(252, 195, 2, 0.8), rgba(252, 195, 2, 0.8)),
+    url("img/bg.png");
+  height: 570px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 var(--padding);
+  color: var(--fontwhite);
+}
+.bg .logo-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33.33%;
+}
+.bg .logo-1 h6 {
+  font-size: 2em;
+  font-weight: 300;
+  padding-top: 40px;
+}
+.bg .logo-1 h1 {
+  font-size: 2em;
+  padding-top: 10px;
+}
+.car-profetional {
+  display: flex;
+  padding: 100px var(--padding);
+  flex-direction: column;
+}
+.car-profetional .title-text {
+  text-align: center;
+  color: var(--fontblack);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.car-profetional .title-text h1 {
+  font-size: 75px;
+  font-weight: 700;
+}
+.car-profetional .title-text h6 {
+  font-size: 33px;
+  font-weight: 400;
+  width: 70%;
+  padding-top: 15px;
+}
+.car-profetional .card-main {
+  display: flex;
+  padding-top: 50px;
+  justify-content: space-between;
+}
+.car-profetional .card-main .card-recent {
+  width: 31%;
+  display: flex;
+  flex-direction: column;
+}
+
+.car-profetional .card-main .card-recent .img-box img {
+  width: 100%;
+  object-fit: contain;
+}
+.car-profetional .card-main .card-recent .text-box {
+  padding-left: 15px;
+  padding-top: 10px;
+  border: 1px solid #a8a3a3;
+  border-top: none;
+}
+.car-profetional .card-main .card-recent .text-box h1 {
+  font-size: 25px;
+  color: var(--fontblack);
+  line-height: 30px;
+}
+.car-profetional .card-main .card-recent .text-box p {
+  font-size: 17px;
+  color: var(--fontblue);
+  padding: 0px 0px;
+}
+.car-profetional .card-main .card-recent .text-box span {
+  display: block;
+  padding-top: 15px;
+  font-size: 17px;
+  color: var(--fontblack);
+}
+.car-profetional .card-main .card-recent .text-box h6 {
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--fontblue);
+  padding: 15px 0 5px 0px;
+}
+footer {
+  padding: 165px var(--padding);
+  background: rgb(52, 52, 52);
+  display: flex;
+  justify-content: space-between;
+  color: var(--fontwhite);
+}
+footer .footer1 {
+  width: 30%;
+}
+footer .footer1 h1 {
+  font-size: 38px;
+  font-weight: 600;
+}
+footer .footer1 ul {
+  margin: 0;
+  padding: 20px 0 0 0;
+}
+footer .footer1 ul li {
+  margin-top: 10px;
+  font-size: 25px;
+}
+footer .footer-2 {
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+footer .footer-2 h1 {
+  font-size: 38px;
+  font-weight: 600;
+}
+footer .footer-2 span {
+  font-size: 22px;
+}
+footer .footer-2 ul {
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+footer .footer-2 ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+footer .footer-2 ul li i {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  color: rgb(52, 52, 52);
+  font-size: 27px;
+  border-radius: 50%;
+}
+
+footer .footer-2 .input-1 {
+  width: 100%;
+  padding: 50px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-2 .input-1 input {
+  width: 80%;
+  height: 50px;
+  outline: none;
+  background: var(--navbg);
+}
+footer .footer-2 .input-1 .tele {
+  height: 50px;
+  width: 20%;
+  background: var(--fontblue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
